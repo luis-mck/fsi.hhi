@@ -23,8 +23,8 @@ class PDF extends tFPDF {
         $this->SetFont('DejaVu', 'I', 12);
         $this->Cell(100, 10, "Schichtplan " . $this->eventInfo["eventName"], "B", 0, 'L');
         $this->SetFont('DejaVu', 'BI', 16);
-        $this->SetTextColor(0, 0,0x80);
-        $this->Cell(0, 10, "fsi", "B", 0, 'R');
+        $this->SetTextColor(0, 0x80,0x80);
+        $this->Cell(0, 10, $this->eventInfo["eventOrganizerLogo"], "B", 0, 'R');
         $this->Ln(10);
     }
 
