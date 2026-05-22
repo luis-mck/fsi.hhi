@@ -1,8 +1,9 @@
 {
-    "eventName": "Clubhausfest WiSe 2025",
-    "eventDesc": "Clubhausfest der Fachschaften Informatik, Kognitionswisschenschaft und Psychologie",
-    "eventDate": "23.10.2025",
-    "eventOrganizer": "FSI, FSK, Psy",
+    "eventName": "Sommerfest SoSe26",
+    "eventDesc": "Sommerfest der Fachschaften Informatik und Kognitionswisschenschaft",
+    "eventDate": "26.06.2026",
+    "eventOrganizer": "FSI, FSK",
+    "eventOrganizerLogo": "fsik",
     "eventTasks": [
         {
             "taskName": "Aufbau",
@@ -17,7 +18,7 @@
                     "shiftSlots": 3
                 }
             ]
-        },
+        },  
         {
             "taskName": "Main-Bar",
             "taskDesc": "Verkauf von Getränken an der Mainfloor Bar.",
