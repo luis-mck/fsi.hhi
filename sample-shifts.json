@@ -1,173 +1,511 @@
 {
-    "eventName": "Sommerfest SoSe26",
-    "eventDesc": "Sommerfest der Fachschaften Informatik und Kognitionswisschenschaft",
+    "eventI18nKey": "event_sommerfest",
+    "eventTranslations": {
+        "name": {
+            "de": "Sommerfest SoSe26",
+            "en": "Summer Party SoSe26"
+        },
+        "desc": {
+            "de": "Schichtplan f\u00fcr das Sommerfest der Fachschaften Informatik und Kognitionswissenschaft<br> <a href='https:\/\/pad.fsi.uni-tuebingen.de\/sommerfest-2026-hhi-meme'>Mehr Informationen<\/a>",
+            "en": "Shift Schedule for the Summer Party of the Student Councils for Computer Science and Cognitive Science<br> <a href='https:\/\/pad.fsi.uni-tuebingen.de\/sommerfest-2026-hhi-meme'>More Inforamtion<\/a>"
+        }
+    },
     "eventDate": "26.06.2026",
     "eventOrganizer": "FSI, FSK",
-    "eventOrganizerLogo": "fsik",
+    "eventOrganizerLogo": "fsi\/k",
     "eventTasks": [
         {
             "taskName": "Aufbau",
-            "taskDesc": "Surprise, was sollt ihr wohl tun?",
+            "i18nKey": "task_aufbau",
+            "translations": {
+                "name": {
+                    "de": "Aufbau",
+                    "en": "Setup"
+                },
+                "desc": {
+                    "de": "Surprise, was sollt ihr wohl tun?",
+                    "en": "Surprise, guess what do you think you're gonna do?"
+                }
+            },
             "taskShifts": [
                 {
-                    "shiftName": "18:00 - 21:00",
-                    "shiftSlots": 10
+                    "shiftName": "10:00 - 17:00",
+                    "i18nKey": "shift_aufbau_01",
+                    "translations": {
+                        "name": {
+                            "de": "10:00 - 17:00",
+                            "en": "10:00 - 17:00"
+                        }
+                    },
+                    "shiftSlots": 14
+                }
+            ]
+        },
+        {
+            "taskName": "Bar",
+            "i18nKey": "task_bar",
+            "translations": {
+                "name": {
+                    "de": "Bar",
+                    "en": "Bar"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
+            "taskShifts": [
+                {
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_bar_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 5
                 },
                 {
-                    "shiftName": "18:00 - 21:00 mit Auto",
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_bar_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 5
+                },
+                {
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_bar_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
+                    "shiftSlots": 5
+                }
+            ]
+        },
+        {
+            "taskName": "Grill",
+            "i18nKey": "task_grill",
+            "translations": {
+                "name": {
+                    "de": "Grill",
+                    "en": "Grill"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
+            "taskShifts": [
+                {
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_grill_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 4
+                },
+                {
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_grill_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 4
+                },
+                {
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_grill_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
+                    "shiftSlots": 4
+                }
+            ]
+        },
+        {
+            "taskName": "Pizza",
+            "i18nKey": "task_pizza",
+            "translations": {
+                "name": {
+                    "de": "Pizza",
+                    "en": "Pizza"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
+            "taskShifts": [
+                {
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_pizza_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 4
+                },
+                {
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_pizza_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 4
+                },
+                {
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_pizza_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
+                    "shiftSlots": 4
+                }
+            ]
+        },
+        {
+            "taskName": "Waffeln",
+            "i18nKey": "task_waffeln",
+            "translations": {
+                "name": {
+                    "de": "Waffeln",
+                    "en": "Waffles"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
+            "taskShifts": [
+                {
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_waffeln_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 3
+                },
+                {
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_waffeln_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 3
+                },
+                {
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_waffeln_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
                     "shiftSlots": 3
                 }
             ]
-        },  
+        },
         {
-            "taskName": "Main-Bar",
-            "taskDesc": "Verkauf von Getränken an der Mainfloor Bar.",
+            "taskName": "Nachschub Essen & Bar",
+            "i18nKey": "task_nachschub",
+            "translations": {
+                "name": {
+                    "de": "Nachschub Essen & Bar",
+                    "en": "Supplying Food & Beverages"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
             "taskShifts": [
                 {
-                    "shiftName": "21:00 - 23:00",
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_nachschub_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
                     "shiftSlots": 4
                 },
                 {
-                    "shiftName": "23:00 - 01:00",
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_nachschub_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
                     "shiftSlots": 4
                 },
                 {
-                    "shiftName": "01:00 - 03:00",
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_nachschub_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
                     "shiftSlots": 4
                 }
             ]
         },
         {
-            "taskName": "Techno-Bar",
-            "taskDesc": "Verkauf von Getränken an der Technofloor Bar.",
+            "taskName": "Teller sp\u00fclen",
+            "i18nKey": "task_spuelen",
+            "translations": {
+                "name": {
+                    "de": "Teller sp\u00fclen",
+                    "en": "Washing dishes"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
             "taskShifts": [
                 {
-                    "shiftName": "21:00 - 23:00",
-                    "shiftSlots": 4
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_spuelen_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 3
                 },
                 {
-                    "shiftName": "23:00 - 01:00",
-                    "shiftSlots": 4
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_spuelen_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 3
                 },
                 {
-                    "shiftName": "01:00 - 03:00",
-                    "shiftSlots": 4
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_spuelen_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
+                    "shiftSlots": 3
                 }
             ]
         },
         {
-            "taskName": "Nachschub Bars",
-            "taskDesc": "Ihr sorgt dafür, dass die Bars ausreichend Getränke haben und keine Engpässe entstehen.",
-            "taskShifts": [
-                {
-                    "shiftName": "21:00 - 23:00",
-                    "shiftSlots": 4
+            "taskName": "Menschenkicker",
+            "i18nKey": "task_menschenkicker",
+            "translations": {
+                "name": {
+                    "de": "Menschenkicker",
+                    "en": "Human-Kicker"
                 },
-                {
-                    "shiftName": "23:00 - 01:00",
-                    "shiftSlots": 4
-                },
-                {
-                    "shiftName": "01:00 - 03:00",
-                    "shiftSlots": 4
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
                 }
-            ]
-        },
-        {
-            "taskName": "Becher spülen",
-            "taskDesc": "Die an den Bars verwendeten Mehrwegbecher müssen für die Wiederbenutzung gespült und wieder zurückgebracht werden.",
+            },
             "taskShifts": [
                 {
-                    "shiftName": "21:00 - 23:00",
-                    "shiftSlots": 4
-                },
-                {
-                    "shiftName": "23:00 - 01:00",
-                    "shiftSlots": 4
-                },
-                {
-                    "shiftName": "01:00 - 03:00",
-                    "shiftSlots": 4
-                }
-            ]
-        },
-        {
-            "taskName": "Ordner:innen",
-            "taskDesc": "Man sorgt in Zweierteams dafür, dass sich niemand reinschleicht oder am Kühlwagen bedient. Außerdem seid ihr die erste Anlaufstelle für Beschwerden und sorgt für Ordnung auf dem Fest.",
-            "taskShifts": [
-                {
-                    "shiftName": "21:00 - 23:00",
-                    "shiftSlots": 8
-                },
-                {
-                    "shiftName": "23:00 - 01:00",
-                    "shiftSlots": 8
-                },
-                {
-                    "shiftName": "01:00 - 03:00",
-                    "shiftSlots": 8
-                }
-            ]
-        },
-        {
-            "taskName": "Awareness-Team",
-            "taskDesc": "Ihr kümmert euch in Situationen, in denen es zu grenzüberschreitendem Verhalten gekommen ist, um die betroffenen Personen: emotionale erste Hilfe.",
-            "taskShifts": [
-                {
-                    "shiftName": "21:00 - 23:00",
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_menschenkicker_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
                     "shiftSlots": 2
                 },
                 {
-                    "shiftName": "23:00 - 01:00",
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_menschenkicker_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
                     "shiftSlots": 2
                 },
                 {
-                    "shiftName": "01:00 - 03:00",
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_menschenkicker_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
                     "shiftSlots": 2
                 }
             ]
         },
         {
-            "taskName": "Einlass &amp; Auslass",
-            "taskDesc": "Man zählt über eine gemeinsame App die Anzahl der Besucher. Dabei darf eine Besucherzahl von 520 Menschen nicht überschritten werden.",
+            "taskName": "Ordner:innen\/Awareness",
+            "i18nKey": "task_ordner-awareness",
+            "translations": {
+                "name": {
+                    "de": "Ordner:innen\/Awareness",
+                    "en": "Security\/Awareness"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
             "taskShifts": [
                 {
-                    "shiftName": "21:00 - 23:00 Einlass",
-                    "shiftSlots": 3
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_ordner-awareness_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 8
                 },
                 {
-                    "shiftName": "21:00 - 23:00 Auslass",
-                    "shiftSlots": 3
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_ordner-awareness_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 8
                 },
                 {
-                    "shiftName": "23:00 - 01:00 Einlass",
-                    "shiftSlots": 3
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_ordner-awareness_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
+                    "shiftSlots": 8
+                }
+            ]
+        },
+        {
+            "taskName": "Springer",
+            "i18nKey": "task_springer",
+            "translations": {
+                "name": {
+                    "de": "Springer",
+                    "en": "Stand-in"
+                },
+                "desc": {
+                    "de": "Lorem ipsum",
+                    "en": "Lorem ipsum"
+                }
+            },
+            "taskShifts": [
+                {
+                    "shiftName": "17:00 - 19:30",
+                    "i18nKey": "shift_springer_01",
+                    "translations": {
+                        "name": {
+                            "de": "17:00 - 19:30",
+                            "en": "17:00 - 19:30"
+                        }
+                    },
+                    "shiftSlots": 2
                 },
                 {
-                    "shiftName": "23:00 - 01:00 Auslass",
-                    "shiftSlots": 3
+                    "shiftName": "19:15 - 21:45",
+                    "i18nKey": "shift_springer_02",
+                    "translations": {
+                        "name": {
+                            "de": "19:15 - 21:45",
+                            "en": "19:15 - 21:45"
+                        }
+                    },
+                    "shiftSlots": 2
                 },
                 {
-                    "shiftName": "01:00 - 03:00 Einlass",
-                    "shiftSlots": 3
-                },
-                {
-                    "shiftName": "01:00 - 03:00 Auslass",
-                    "shiftSlots": 3
+                    "shiftName": "21:30 - 00:00",
+                    "i18nKey": "shift_springer_03",
+                    "translations": {
+                        "name": {
+                            "de": "21:30 - 00:00",
+                            "en": "21:30 - 00:00"
+                        }
+                    },
+                    "shiftSlots": 2
                 }
             ]
         },
         {
             "taskName": "Abbau",
-            "taskDesc": "Bis zum bitteren Ende.",
+            "i18nKey": "task_abbau",
+            "translations": {
+                "name": {
+                    "de": "Abbau",
+                    "en": "Dismantling"
+                },
+                "desc": {
+                    "de": "Bis zum bitteren Ende.",
+                    "en": "Until the bitter end."
+                }
+            },
             "taskShifts": [
                 {
-                    "shiftName": "03:00 - Ende",
-                    "shiftSlots": 10
-                },
-                {
-                    "shiftName": "03:00 - Ende mit Auto",
-                    "shiftSlots": 3
+                    "shiftName": "00:00 - Ende",
+                    "i18nKey": "shift_abbau_01",
+                    "translations": {
+                        "name": {
+                            "de": "00:00 - Ende",
+                            "en": "00:00 - End"
+                        }
+                    },
+                    "shiftSlots": 14
                 }
             ]
         }

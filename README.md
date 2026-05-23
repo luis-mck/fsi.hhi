@@ -58,6 +58,12 @@ The shift definition uses the following hierarchical structure:
 
 For an example, have a look at `sample-shifts.json`.
 
+#### Translation
+While editing `shifts.json`, make sure to add text-variants for both english and german translation.
+Every `i18nKey` needs to be unique.
+
+After editing `shifts.json`, make sure to run `node sync-i18n.js` in order to update the language files.
+
 ## Test this project
 
 Just run `make test` (because Makefiles are superior). This will host a local
