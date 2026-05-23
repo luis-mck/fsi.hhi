@@ -17,8 +17,8 @@ function handleCsvExport($config, &$eventInfo) {
         foreach($task["taskShifts"] as $shiftIndex => $shift) {
             if( ! isset($shift["entries"])) continue;
             foreach($shift["entries"] as $entryIndex => $entry) {
-                $result .= html_entity_decode($task["taskName"]) . $colDelim;
-                $result .= html_entity_decode($shift["shiftName"]) . $colDelim;
+                $result .= html_entity_decode(i18n($task["i18nKey"] . "_name")) . $colDelim;
+                $result .= html_entity_decode(i18n($shift["i18nKey"] . "_name")) . $colDelim;
                 $result .= html_entity_decode($entry["entryName"]) . $colDelim;
                 $result .= html_entity_decode($entry["entryMail"] ?? "") . $colDelim;
                 $result .= date(DATE_ATOM, $entry["entryTimestamp"] ?? 0);
@@ -45,7 +45,7 @@ function handleCsvExport($config, &$eventInfo) {
         $mail->CharSet = "UTF-8";
         /* content */
         $mail->isHTML(false);
-        $mail->Subject = i18n("export.mail.subject", ["eventName" => $eventInfo["eventName"]]);
+        $mail->Subject = i18n("export.mail.subject", ["eventName" => i18n($eventInfo["eventI18nKey"] . "_name")]);
         $mail->Body = i18n("export.mail.body");
         $mail->AddStringAttachment($result, i18n("export.csv.filename"));
         $mail->AddStringAttachment($binaryPdf, i18n("export.pdf.filename"));

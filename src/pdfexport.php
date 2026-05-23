@@ -21,7 +21,7 @@ class PDF extends tFPDF {
     function Header() {
         $this->SetXY($this->margins,0);
         $this->SetFont('DejaVu', 'I', 12);
-        $this->Cell(100, 10, i18n("pdf.shift_plan", ["name" => $this->eventInfo["eventName"]]), "B", 0, 'L');
+        $this->Cell(100, 10, i18n("pdf.shift_plan", ["name" => "– " . i18n($this->eventInfo["eventI18nKey"] . "_name")]), "B", 0, 'L');
         $this->SetFont('DejaVu', 'BI', 16);
         $this->SetTextColor(0, 0x80,0x80);
         $this->Cell(0, 10, $this->eventInfo["eventOrganizerLogo"], "B", 0, 'R');
@@ -44,11 +44,11 @@ function buildPdf($config, &$eventInfo) {
         $pdf->AddPage();
         $pdf->SetFont("DejaVu", "B", 24);
         $pdf->Ln(6);
-        $pdf->Cell(0, 10, i18n("pdf.shift_plan", ["name" => html_entity_decode($task["taskName"])]), 0, 0, "C");
+        $pdf->Cell(0, 10, i18n("pdf.shift_plan", ["name" => "- " . html_entity_decode(i18n($task["i18nKey"] . "_name"))]), 0, 0, "C");
         $pdf->Ln(13);
         $pdf->SetFont("DejaVu", "I", 12);
         $pdf->MultiCell(0, 6, 
-            strip_tags(html_entity_decode(str_replace(array("<br/>", "<br>"), "\n", $task["taskDesc"]))), 
+            strip_tags(html_entity_decode(str_replace(array("<br/>", "<br>"), "\n", i18n($task["i18nKey"] . "_desc")))), 
             0, "C");
         $pdf->Ln(3);
         /* table header */
@@ -60,12 +60,12 @@ function buildPdf($config, &$eventInfo) {
         foreach($task["taskShifts"] as $shift) {
             $fontSize = $initFontSize;
             $pdf->SetFont("DejaVu", "B", $fontSize);
-            while($pdf->GetStringWidth($shift["shiftName"]) > $colWidth) {
+            while($pdf->GetStringWidth(i18n($shift["i18nKey"] . "_name")) > $colWidth) {
                 /* shrink until fit */
                 $fontSize--;
                 $pdf->SetFont("DejaVu", "B", $fontSize);
             } 
-            $pdf->Cell($colWidth, 10, $shift["shiftName"], "B", 0, "C");
+            $pdf->Cell($colWidth, 10, i18n($shift["i18nKey"] . "_name"), "B", 0, "C");
         }
         $pdf->Ln(10);
         /* table content */

@@ -27,9 +27,11 @@ function handleRegister(array $postData, array $config, array &$eventInfo): int 
 
     /* find correct task and shift */
     $tasks = $eventInfo["eventTasks"];
-    $taskIndex = array_search($taskName, array_map(fn($t) => html_entity_decode($t['taskName']), $tasks), true);
+    $taskIndex = array_search($taskName, array_map(fn($t) => html_entity_decode($t['i18nKey']), $tasks), true);
+    $task = $tasks[$taskIndex] ?? null;
     $shifts = $tasks[$taskIndex]['taskShifts'];
-    $shiftIndex = array_search($shiftName, array_map(fn($s) => html_entity_decode($s['shiftName']), $shifts), true);
+    $shiftIndex = array_search($shiftName, array_map(fn($s) => html_entity_decode($s['i18nKey']), $shifts), true);
+    $shift = $shifts[$shiftIndex] ?? null;
     /* prevent invalid shifts */
     if($taskIndex === FALSE || $shiftIndex === FALSE) {
         flock($fp, LOCK_UN);
@@ -64,14 +66,14 @@ function handleRegister(array $postData, array $config, array &$eventInfo): int 
             /* content */
             $mail->isHTML(false);
             $mail->Subject = i18n("mail.register.subject", [
-                "eventName" => $eventInfo["eventName"]
+                "eventName" => i18n($eventInfo["eventI18nKey"] . "_name")
             ]);
             $mail->Body = i18n("mail.register.body", [
                 "entryName" => $entry["entryName"],
-                "eventName" => $eventInfo["eventName"],
+                "eventName" => i18n($eventInfo["eventI18nKey"] . "_name"),
                 "eventDate" => $eventInfo["eventDate"],
-                "taskName" => $taskName,
-                "shiftName" => $shiftName,
+                "taskName" => i18n($task["i18nKey"] . "_name"),
+                "shiftName" => i18n($shift["i18nKey"] . "_name"),
                 "unregisterUrl" => "{$config["baseUrl"]}?action=unregisterDialog&hash={$entry["entryHash"]}",
                 "eventOrganizer" => $eventInfo["eventOrganizer"]
             ]);

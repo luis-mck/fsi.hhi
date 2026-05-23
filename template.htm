@@ -25,7 +25,7 @@
             function shareDialog() {
                 const shareData = {
                     title: <?=json_encode(i18n("share.title"), JSON_UNESCAPED_UNICODE)?>,
-                    text: <?=json_encode(i18n("share.text", ["eventName" => $eventInfo["eventName"]]), JSON_UNESCAPED_UNICODE)?>,
+                    text: <?=json_encode(i18n("share.text", ["eventName" => i18n($eventInfo["eventI18nKey"] . "_name")]), JSON_UNESCAPED_UNICODE)?>,
                     url: "<?=$config["baseUrl"]?>"
                 };
                 navigator.share(shareData);
@@ -119,7 +119,7 @@
                 <?php } ?>
             </div>
             <h1>
-                <?=$eventInfo["eventName"]?>
+                <?=i18n($eventInfo["eventI18nKey"] . "_name")?>
             </h1>
             <div class="columns col-gapless">
                 <div class="column col-4 col-md-3 text-right">
@@ -135,9 +135,7 @@
                     <i style="font-size: 200%" class="si-info-circle"></i>
                 </div>
                 <div class="column col-4 col-md-8 text-center">
-                    <?=$eventInfo["eventDesc"]?>
-                    <br>
-                    <a href="https://pad.fsi.uni-tuebingen.de/sommerfest-2026-hhi-meme">Mehr Informationen</a>
+                    <?=i18n($eventInfo["eventI18nKey"] . "_desc")?>
                 </div>
             </div>
             <div class="divider"></div>
@@ -176,8 +174,8 @@
                                 <h5 class="c-hand">
                                     <i class="icon icon-arrow-right mr-1"></i>
                                     <i class="icon icon-time mr-1"></i>
-                                    <?=$shift["shiftName"]?> 
-                                    <?=isset($shift["shiftDesc"]) ? "<small class='chip bg-primary'>".$shift["shiftDesc"]."</small>" : ""?>
+                                    <?=i18n($shift["i18nKey"] . "_name")?>
+                                    <?=isset($shift["translations"]["desc"]) ? "<small class='chip bg-primary'>".i18n($shift["i18nKey"] . "_desc")."</small>" : ""?>
                                     <span class="chip chip-occupancy progress-ring progress-ring-small" style="--progress: <?=$shift["occupancyPercentage"] * 100?>; --fill-color: <?=$shift["occupancyColor"]?>">
                                         <span class="progress-text"><?=$shift["occupancyString"]?></span>
                                     </span>
@@ -202,7 +200,7 @@
                                 </table>
                                 <?php if( $config["enableRegister"] 
                                     && (!isset($shift["entries"]) || count($shift["entries"]) < $shift["shiftSlots"])) { ?>  
-                                <a href="javascript:showRegistrationDialog('<?=$task["taskName"]?>', '<?=$shift["shiftName"]?>')" 
+                                <a href="javascript:showRegistrationDialog('<?=$task["i18nKey"]?>', '<?=$shift["i18nKey"]?>')" 
                                     class="btn btn-primary btn-register"><?=i18n("shift.register_button")?></a>
                                 <?php } ?>
                             </div>
