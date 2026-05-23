@@ -8,6 +8,9 @@
         "replyToAddress": "fsi@fsi.uni-tuebingen.de",
         "replyToName": "FSI"
     },
+    "adminMail1": "firstName1.lastName1@student.uni-tuebingen.de",
+    "adminMail2": "firstName2.lastName2@student.uni-tuebingen.de", 
+    "adminMail3": "",
     "shiftFile": "./shifts.json",
     "baseUrl": "http://localhost:8080/index.php",
     "hashSalt": "muchmoresecret",

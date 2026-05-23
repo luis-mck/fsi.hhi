@@ -41,7 +41,11 @@ function handleCsvExport($config, &$eventInfo) {
         $mail->Port = 587;
         /* smtp mail settings */
         $mail->setFrom($config["mail"]["fromaddress"], $config["mail"]["fromname"]);
-        $mail->addAddress($config["adminMail"], i18n("export.mail.recipient_name"));
+        $mail->addAddress($config["adminMail1"], i18n("export.mail.recipient_name"));
+        if (!empty($config["adminMail2"]) && filter_var($config["adminMail2"], FILTER_VALIDATE_EMAIL)) {
+            $mail->addCC($config["adminMail2"], i18n("export.mail.recipient_name"));}
+        if (!empty($config["adminMail3"]) && filter_var($config["adminMail3"], FILTER_VALIDATE_EMAIL)) {
+            $mail->addCC($config["adminMail3"], i18n("export.mail.recipient_name"));}
         $mail->CharSet = "UTF-8";
         /* content */
         $mail->isHTML(false);
