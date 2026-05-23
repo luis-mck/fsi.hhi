@@ -44,7 +44,7 @@ function buildPdf($config, &$eventInfo) {
         $pdf->AddPage();
         $pdf->SetFont("DejaVu", "B", 24);
         $pdf->Ln(6);
-        $pdf->Cell(0, 10, i18n("pdf.shift_plan", ["name" => "- " . html_entity_decode(i18n($task["i18nKey"] . "_name"))]), 0, 0, "C");
+        $pdf->Cell(0, 10, i18n("pdf.shift_plan", ["name" => "– " . html_entity_decode(i18n($task["i18nKey"] . "_name"))]), 0, 0, "C");
         $pdf->Ln(13);
         $pdf->SetFont("DejaVu", "I", 12);
         $pdf->MultiCell(0, 6, 

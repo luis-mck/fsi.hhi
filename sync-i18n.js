@@ -65,4 +65,4 @@ shiftsData.eventTasks.forEach(task => {
 fs.writeFileSync('./i18n/de.json', JSON.stringify(finalDe, null, 4));
 fs.writeFileSync('./i18n/en.json', JSON.stringify(finalEn, null, 4));
 
-console.log('🚀 Erfolgreich: de.json und en.json wurden aus den Basis-Dateien und shifts.json neu generiert!');
+console.log('success: translation files updated');

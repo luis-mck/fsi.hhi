@@ -48,6 +48,30 @@ h2, h3, h4, h5, h6 {
     margin-bottom: 0px;
 }
 
+a, a:visited {
+    color: var(--logo); 
+    transition: color .2s ease;
+}
+
+a:hover, a:active {
+    color: color-mix(in srgb, var(--logo) 75%, #000000); 
+}
+
+.btn.btn-primary {
+    background-color: var(--logo);
+    border-color: var(--logo);
+    color: #ffffff; /* Weißer Text auf grünem Grund */
+    transition: all .2s ease;
+}
+
+.btn.btn-primary:hover, 
+.btn.btn-primary:focus, 
+.btn.btn-primary:active {
+    background-color: color-mix(in srgb, var(--logo) 75%, #000000);
+    border-color: color-mix(in srgb, var(--logo) 75%, #000000);
+    color: #ffffff;
+}
+
 .accordion-task {
     margin-bottom: 5px;
     background-color: var(--bg-secondary);
