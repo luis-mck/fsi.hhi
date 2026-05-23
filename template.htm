@@ -136,6 +136,8 @@
                 </div>
                 <div class="column col-4 col-md-8 text-center">
                     <?=$eventInfo["eventDesc"]?>
+                    <br>
+                    <a href="https://pad.fsi.uni-tuebingen.de/sommerfest-2026-hhi-meme">Mehr Informationen</a>
                 </div>
             </div>
             <div class="divider"></div>
@@ -157,7 +159,7 @@
                     <h3 class="c-hand">
                         <i class="icon icon-arrow-right mr-1"></i> 
                         <i class="si-pin"></i>
-                        <?=$task["taskName"]?>
+                        <?=i18n($task["i18nKey"] . "_name")?>
                         <span class="chip chip-occupancy progress-ring" style="--progress: <?=$task["occupancyPercentage"] * 100?>; --fill-color: <?=$task["occupancyColor"]?>">
                             <span class="progress-text"><?=$task["occupancyString"]?></span>
                         </span>
@@ -165,7 +167,7 @@
                 </label>
                 <div class="accordion-body">
                     <div class="text-italic shift-desc">
-                        <?=$task["taskDesc"]?>
+                        <?=i18n($task["i18nKey"] . "_desc")?>
                     </div>
                     <?php foreach($task["taskShifts"] as $shift) { ?>
                         <div class="accordion accordion-shift">

@@ -3,3 +3,5 @@ shifts.json
 .DS_Store
 .mtx.php
 **/*.mtx.php
+i18n/de.json
+i18n/en.json
