@@ -31,10 +31,10 @@
                 navigator.share(shareData);
             }
 
-            function showRegistrationDialog(task, shift) {
-                document.getElementById("registration-task").innerHTML = task;
+            function showRegistrationDialog(task, shift, taskTranslated, shiftTranslated) {
+                document.getElementById("registration-task").innerHTML = taskTranslated;
                 document.getElementById("input-task").value = task;
-                document.getElementById("registration-shift").innerHTML = shift;
+                document.getElementById("registration-shift").innerHTML = shiftTranslated;
                 document.getElementById("input-shift").value = shift;
                 document.getElementById("modal-registration").classList.add("active");
                 //document.getElementById("input-name").focus();
@@ -152,8 +152,8 @@
         <section>
             <?php foreach($eventInfo["eventTasks"] as $task) { ?>
             <div class="accordion accordion-task">
-                <input type="checkbox" id="accordion-<?=md5($task["taskName"])?>" name="accordion-checkbox" hidden>
-                <label class="accordion-header" for="accordion-<?=md5($task["taskName"])?>">
+                <input type="checkbox" id="accordion-<?=md5($task["i18nKey"])?>" name="accordion-checkbox" hidden>
+                <label class="accordion-header" for="accordion-<?=md5($task["i18nKey"])?>">
                     <h3 class="c-hand">
                         <i class="icon icon-arrow-right mr-1"></i> 
                         <i class="si-pin"></i>
@@ -169,8 +169,8 @@
                     </div>
                     <?php foreach($task["taskShifts"] as $shift) { ?>
                         <div class="accordion accordion-shift">
-                            <input type="checkbox" id="accordion-<?=md5($task["taskName"] . $shift["shiftName"]) . (isset($shift["shiftDesc"]) ? $shift["shiftDesc"] : "")?>" name="accordion-checkbox" hidden>
-                            <label class="accordion-header c-hand" for="accordion-<?=md5($task["taskName"] . $shift["shiftName"]) . (isset($shift["shiftDesc"]) ? $shift["shiftDesc"] : "")?>">
+                            <input type="checkbox" id="accordion-<?=md5($task["i18nKey"] . $shift["i18nKey"])?>" name="accordion-checkbox" hidden>
+                            <label class="accordion-header c-hand" for="accordion-<?=md5($task["i18nKey"] . $shift["i18nKey"])?>">    <h5 class="c-hand">
                                 <h5 class="c-hand">
                                     <i class="icon icon-arrow-right mr-1"></i>
                                     <i class="icon icon-time mr-1"></i>
@@ -200,7 +200,7 @@
                                 </table>
                                 <?php if( $config["enableRegister"] 
                                     && (!isset($shift["entries"]) || count($shift["entries"]) < $shift["shiftSlots"])) { ?>  
-                                <a href="javascript:showRegistrationDialog('<?=$task["i18nKey"]?>', '<?=$shift["i18nKey"]?>')" 
+                                <a href="javascript:showRegistrationDialog('<?=$task["i18nKey"]?>', '<?=$shift["i18nKey"]?>', '<?=i18n($task["i18nKey"] . "_name")?>', '<?=i18n($shift["i18nKey"] . "_name")?>')" 
                                     class="btn btn-primary btn-register"><?=i18n("shift.register_button")?></a>
                                 <?php } ?>
                             </div>
