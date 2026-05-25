@@ -7,3 +7,4 @@ Makefile
 LICENSE
 Dockerfile
 *.yml
+sync_i18n.js

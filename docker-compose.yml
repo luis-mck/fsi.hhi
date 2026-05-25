@@ -6,3 +6,4 @@ services:
     volumes:
       - ./config.json:/var/www/html/config.json
       - ./shifts.json:/var/www/html/shifts.json
+      - ./i18n:/var/www/html/i18n
