@@ -209,6 +209,11 @@ a:hover, a:active {
   width: 100%;
 }
 
+.accordion .accordion-header h5 {
+  display: inline-block;
+  width: 100%;
+}
+
 .accordion > input:checked + .accordion-header .icon-arrow-right {
   transform: rotate(90deg);
 }
