@@ -60,7 +60,7 @@ a:hover, a:active {
 .btn.btn-primary {
     background-color: var(--logo);
     border-color: var(--logo);
-    color: #ffffff; /* Weißer Text auf grünem Grund */
+    color: #ffffff;
     transition: all .2s ease;
 }
 
@@ -202,6 +202,11 @@ a:hover, a:active {
 .accordion .accordion-header .icon-arrow-right {
   display: inline-block;           /* nötig für transform */
   transition: transform .2s ease;  /* smooth rotation */
+}
+
+.accordion .accordion-header h3 {
+  display: inline-block;
+  width: 100%;
 }
 
 .accordion > input:checked + .accordion-header .icon-arrow-right {
