@@ -6,5 +6,8 @@ test:
 docker:
 	docker compose up -d --build
 
-sync:
+jsSync:
 	node sync-i18n.js
+
+pySync:
+	python3 sync-i18n.py

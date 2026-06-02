@@ -8,3 +8,4 @@ LICENSE
 Dockerfile
 *.yml
 sync_i18n.js
+sync_i18n.py
