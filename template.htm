@@ -157,10 +157,11 @@
                     <h3 class="c-hand">
                         <i class="icon icon-arrow-right mr-1"></i> 
                         <i class="si-pin"></i>
-                        <?=i18n($task["i18nKey"] . "_name")?>
                         <span class="chip chip-occupancy progress-ring" style="--progress: <?=$task["occupancyPercentage"] * 100?>; --fill-color: <?=$task["occupancyColor"]?>">
                             <span class="progress-text"><?=$task["occupancyString"]?></span>
                         </span>
+                        <?=i18n($task["i18nKey"] . "_name")?>
+                        
                     </h3>
                 </label>
                 <div class="accordion-body">
@@ -174,11 +175,12 @@
                                 <h5 class="c-hand">
                                     <i class="icon icon-arrow-right mr-1"></i>
                                     <i class="icon icon-time mr-1"></i>
-                                    <?=i18n($shift["i18nKey"] . "_name")?>
-                                    <?=isset($shift["translations"]["desc"]) ? "<small class='chip bg-primary'>".i18n($shift["i18nKey"] . "_desc")."</small>" : ""?>
                                     <span class="chip chip-occupancy progress-ring progress-ring-small" style="--progress: <?=$shift["occupancyPercentage"] * 100?>; --fill-color: <?=$shift["occupancyColor"]?>">
                                         <span class="progress-text"><?=$shift["occupancyString"]?></span>
                                     </span>
+                                    <?=i18n($shift["i18nKey"] . "_name")?>
+                                    <?=isset($shift["translations"]["desc"]) ? "<small class='chip bg-primary'>".i18n($shift["i18nKey"] . "_desc")."</small>" : ""?>
+                                    
                                 </h5>
                             </label>
                             <div class="accordion-body">
