@@ -30,9 +30,12 @@ For this purpose the project includes a sample `.htaccess` file.
 | Key                | Description                                                                 | Required |
 | ------------------ | --------------------------------------------------------------------------- | -------- |
 | `shiftFile`        | Path to JSON with shift definitions (see next chapter)                      | yes      |
-| `adminMail1`       | Mail address of the administrator 1 who will receive the csv export         | yes      |
-| `adminMail2`       | Mail address of the administrator 2 who will receive the csv export (in CC) | no       |
-| `adminMail3`       | Mail address of the administrator 3 who will receive the csv export (in CC) | no       |
+| `adminMail1`       | Mail address of the administrator 1 who will receive the csv export and gets added to the mail replyTo        | yes      |
+| `adminMail2`       | Mail address of the administrator 2 who will receive the csv export (in CC) and gets added to the mail replyTo | no       |
+| `adminMail3`       | Mail address of the administrator 3 who will receive the csv export (in CC) and gets added to the mail replyTo | no       |
+| `adminName1`       | Name of administrator 1 | yes      |
+| `adminName2`       | Name of administrator 2 | no       |
+| `adminName3`       | Name of administrator 3 | no       |
 | `baseUrl`          | The base URL of the service, usually ending with `index.php`                | yes      |
 | `hashSalt`         | Salt for the registration hashs                                             | yes      |
 | `enableRegister`   | Enable or disable registration function                                     | yes      |

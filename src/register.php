@@ -62,6 +62,11 @@ function handleRegister(array $postData, array $config, array &$eventInfo): int 
             $mail->setFrom($config["mail"]["fromaddress"], $config["mail"]["fromname"]);
             $mail->addAddress($entry["entryMail"], $entry["entryName"]);
             $mail->addReplyTo($config["mail"]["replyToAddress"], $config["mail"]["replyToName"]);
+            $mail->addReplyTo($config["adminMail1"], $config["adminName1"]);
+            if (!empty($config["adminMail2"]) && filter_var($config["adminMail2"], FILTER_VALIDATE_EMAIL)) {
+                $mail->addReplyTo($config["adminMail2"], $config["adminName2"]);}
+            if (!empty($config["adminMail3"]) && filter_var($config["adminMail3"], FILTER_VALIDATE_EMAIL)) {
+                $mail->addReplyTo($config["adminMail3"], $config["adminName3"]);}
             $mail->CharSet = "UTF-8";
             /* content */
             $mail->isHTML(false);
