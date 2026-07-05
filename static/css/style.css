@@ -4,10 +4,10 @@
   --text: #111111;
   --border: #cfcfcf;
   --icon: #808080;
-  --logo: #008080;
+  --logo: #000080;
   --logo-first: #ff0000;
   --footer: #666666;
-  --toast-btn: #008080;
+  --toast-btn: #5755d9;
   --modal-background: rgba(247,248,249,.75);
 }
 
@@ -17,10 +17,10 @@
     --text: #e6e7ea;
     --border: #3d4047;
     --icon: #9aa0a6;
-    --logo: #008080;
+    --logo: #a6b8ff;
     --logo-first: #ff6b6b;
     --footer: #9aa0a6;
-    --toast-btn: #008080;
+    --toast-btn: #8d91ff;
     --modal-background: rgba(20,20,20,.75);
   }
 
